@@ -1,0 +1,34 @@
+.bg {
+    background-image: url(".././images/background.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+nav {
+    background: transparent;
+}
+.nav-main-heading {
+    font-family: 'Montez', cursive;
+    font-size: 6vmin;
+    text-decoration: none;
+}
+.nav-sub-heading {
+    position: absolute;
+    left: 1%;
+    top: 72%;
+    font-family: 'Ubuntu Mono', serif;
+    font-size: 16px;
+}
+.nav-buttons {
+    background-color: #0000ff;
+    color: #fff;
+    border-radius: 0;
+}
+.d-flex {
+    width: 10%;
+}
+.button-sign-in {
+    margin-left: 6%;
+}
