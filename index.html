@@ -2,17 +2,17 @@
 <html>
 
 <head>
-    <!-- Bootstrap file -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css"
-          rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0"
-          crossorigin="anonymous">
     <!-- Font Awesome file -->
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Google Fonts file -->
     <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap" rel="stylesheet">
     <link href="styles/index.css" rel="stylesheet">
     <link href="styles/common.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="scripts/common.js"></script>
 </head>
 
 <body>
@@ -22,17 +22,82 @@
             <div class="container-fluid">
                 <a class="nav-main-heading">ScriBBler</a>
                 <span class="nav-sub-heading">Explore, Imagine, Create</span>
-                <div class="d-flex">
-                    <button class="btn nav-buttons" type="submit">Sign Up</button>
-                    <button class="btn nav-buttons button-sign-in" type="submit">Sign In</button>
+                <div class="buttons-div">
+                    <button class="btn nav-buttons" data-toggle="modal"
+                            data-target="#signUpModal"
+                            type="submit">Sign Up</button>
+                    <button class="btn nav-buttons button-sign-in"  data-toggle="modal"
+                            data-target="#signInModal"
+                            type="submit">Sign In</button>
+                    <!-- Sign Up Modal -->
+                    <div id="signUpModal" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Get Started</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form id="sign-up-form">
+                                        <div class="form-group">
+                                            <label for="name">Name</label>
+                                            <input type="text" class="form-control" id="name" placeholder="Enter your name" name="name" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="username">Username</label>
+                                            <input type="text" class="form-control" id="username" placeholder="Enter your username" name="username" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="pwd">Password</label>
+                                            <input type="password" class="form-control" id="pwd" placeholder="Enter your password" name="pwd" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="confirm-pwd">Confirm Password</label>
+                                            <input type="password" class="form-control" id="confirm-pwd" placeholder="Re-enter your password" name="confirm-pwd" required>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="submit" form="sign-up-form" class="btn btn-success btn-width">Sign Up</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- Sign In Modal -->
+                    <div id="signInModal" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Welcome Back!</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form id="sign-in-form">
+                                        <div class="form-group">
+                                            <label for="user-name">Username</label>
+                                            <input type="text" class="form-control" id="user-name" placeholder="Enter your username" name="user-name" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="pswd">Password</label>
+                                            <input type="password" class="form-control" id="pswd" placeholder="Enter your password" name="pswd" required>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="submit" form="sign-in-form" class="btn btn-success btn-width">Sign In</button>
+                                    <div class="bottom-text-div">
+                                        Not a member ? <a href="#" onclick="openSignUpModal()">Sign Up </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </nav>
     </div>
-    <!-- Bootstrap js here -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
-            crossorigin="anonymous"></script>
 </body>
 
 </html>

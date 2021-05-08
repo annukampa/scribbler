@@ -26,9 +26,20 @@ nav {
     color: #fff;
     border-radius: 0;
 }
-.d-flex {
-    width: 10%;
+.buttons-div {
+    display: inline-block;
+    float: right;
+    position: relative;
+    top: 25px;
+    width: 12%;
 }
 .button-sign-in {
     margin-left: 6%;
+}
+.btn-width {
+    width: 100%;
+}
+.bottom-text-div {
+    text-align: center;
+    margin-top: 2%;
 }
