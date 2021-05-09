@@ -1,5 +1,6 @@
 let commentsArr = [];
 let postData;
+let likes = 0;
 function openSignUpBox() {
     $('#signInBox').modal('hide');
     $('#signUpBox').modal('show');
@@ -10,9 +11,11 @@ function renderEditPostDiv() {
     let headerEl = document.getElementById('edit-header');
     let subHeaderEl = document.getElementById('edit-sub-header-el');
     let contentDiv = document.getElementById('post-content');
+    let likeDiv = document.getElementById('like-text');
     headerEl.innerText = postData.heading;
     subHeaderEl.innerText = postData.writer;
     contentDiv.innerHTML = postData.content;
+    likeDiv.innerHTML = 'Be the first one to like this!';
 }
 
 function editPost() {
@@ -48,4 +51,15 @@ function savePost() {
         '                <button id="edit-button" class="btn post-page-btn" onclick="editPost()">Edit\n' +
         '                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>\n' +
         '                </button>'
+}
+
+function hitLike() {
+    likes ++;
+    if (likes === 1) {
+        document.getElementById('like-text').innerHTML = '1 person likes this!';
+    } else if (likes > 1) {
+        document.getElementById('like-text').innerHTML = likes + ' people like this!';
+    }
+    document.getElementsByClassName('like-btn')[0].innerHTML = '<i class="fa fa-thumbs-up" aria-hidden="true"></i>\n' +
+        '                Liked';
 }
