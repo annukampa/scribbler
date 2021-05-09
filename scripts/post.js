@@ -63,3 +63,19 @@ function hitLike() {
     document.getElementsByClassName('like-btn')[0].innerHTML = '<i class="fa fa-thumbs-up" aria-hidden="true"></i>\n' +
         '                Liked';
 }
+
+function addComment() {
+    console.log('text box comment is', document.getElementsByClassName('comment-box')[0].value);
+    let commentsDiv = document.getElementById('added-comments-list');
+    let comment = document.getElementsByClassName('comment-box')[0].value;
+    /*if (commentsArr.length === 0) {
+        commentsArr.push(comment);
+    } else {
+        commentsArr.unshift(comment);
+    }*/
+    commentsArr.push(comment);
+    console.log('comments arr is#@#', commentsArr);
+    let commentEl = document.createElement('div');
+    commentEl.innerHTML = comment;
+    commentsDiv.appendChild(commentEl);
+}
