@@ -7,9 +7,48 @@
     align-items: center;
     padding-left: 3%;
     padding-right: 3%;
-    padding-bottom: 2%;
+    padding-bottom: 1%;
+}
+#edit-sub-header-el {
+    font-size: 18px;
+    font-family: 'Ubuntu Mono', serif;
 }
 #post-content {
     padding-left: 3%;
     padding-right: 3%;
+}
+.post-page-btn {
+    background-color: #ed2553;
+    color: #fff;
+    font-weight: 500;
+    outline: 0;
+}
+.post-page-btn i {
+    font-size: 18px;
+    position: relative;
+    top: 1px;
+}
+.post-page-btn:hover, .post-page-btn:visited, .post-page-btn:focus {
+    border: 1px solid #fff;
+    border-style: ridge;
+    color: #fff;
+    outline: 0;
+}
+.like-btn {
+    margin-left: 3%;
+    margin-top: 1%;
+}
+.like-text {
+    margin-left: 3%;
+    margin-top: 4px;
+    font-family: 'Roboto Mono', monospace;
+}
+.comment-box {
+    width: 60%;
+    margin-left: 3%;
+    margin-top: 1%;
+}
+.added-comments-section {
+    margin-left: 3%;
+    margin-top: 1%;
 }

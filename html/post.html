@@ -6,6 +6,7 @@
     <!-- Google Fonts file -->
     <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="../styles/common.css">
     <link rel="stylesheet" href="../styles/post.css">
@@ -98,12 +99,24 @@
             <h3 id="edit-header" class="text-center"></h3>
             <div class="edit-sub-header">
                 <span id="edit-sub-header-el"></span>
-                <button>Edit
+                <button class="btn post-page-btn">Edit
                     <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                 </button>
             </div>
             <div id="post-content">
-
+            </div>
+            <button class="btn post-page-btn like-btn">
+                <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                Like
+            </button>
+            <div class="like-text">Be the first one to like this!</div>
+            <div class="comments-section">
+                <textarea class="form-control comment-box" placeholder="Leave a comment..."
+                rows="2"></textarea>
+                <button class="btn post-page-btn like-btn">Comment</button>
+            </div>
+            <div class="added-comments-section">
+                <h5>All Comments</h5>
             </div>
         </div>
     </div>
