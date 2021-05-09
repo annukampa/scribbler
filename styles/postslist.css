@@ -16,6 +16,9 @@ body, html {
     box-shadow: 5px 5px 5px #b7b7b7;
     border-radius: 5%;
 }
+.post-div:hover {
+    box-shadow: 15px 15px 15px rgba(33,33,33,.2);
+}
 .post-user {
     background-color: #fff;
     padding: 2%;
@@ -44,7 +47,7 @@ body, html {
 .post-header-div i {
     color: #7d797c;
     font-weight: 300;
-    font-size: 16px;
+    font-size: 17px;
 }
 .ellipsis-span {
     float: right;
@@ -53,4 +56,24 @@ body, html {
     color: #7d797c;
     font-weight: 300;
     font-size: 16px;
+}
+#deletePostModal .modal-header, #deletePostModal .modal-footer {
+    border: none;
+    text-align: center;
+}
+.all-posts-div .modal {
+    position: fixed;
+    top: 30% !important;
+}
+.all-posts-div .modal-dialog {
+    width: 350px;
+    border-radius: 0;
+}
+.all-posts-div .modal-content {
+    border-radius: 0;
+}
+#deletePostModal .modal-footer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
