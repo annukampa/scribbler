@@ -2,3 +2,9 @@ body, html {
     height: 100%;
     margin: 0;
 }
+.create-button {
+    text-align: center !important;
+}
+#create-form input, #create-form textarea {
+    background-color: #f4f4f4;
+}
