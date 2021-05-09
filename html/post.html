@@ -1,6 +1,4 @@
 <!DOCTYPE html>
-<html>
-
 <head>
     <title>Scribbler</title>
     <!-- Font Awesome file -->
@@ -8,31 +6,28 @@
     <!-- Google Fonts file -->
     <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap" rel="stylesheet">
-    <link href="styles/index.css" rel="stylesheet">
-    <link href="styles/common.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../styles/common.css">
+    <link rel="stylesheet" href="../styles/post.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script src="scripts/common.js"></script>
+    <script src="../scripts/post.js"></script>
 </head>
-
 <body>
-    <!-- code for the header and home page here -->
-    <div class="bg">
-        <!-- The Header Part -->
+    <div>
         <nav class="navbar navbar-light">
             <div class="container-fluid">
-                <a class="nav-main-heading">ScriBBler</a>
+                <a class="nav-main-heading" href="#" onclick="window.location.href='postslist.html'">ScriBBler</a>
                 <span class="nav-sub-heading">Explore, Imagine, Create</span>
                 <div class="buttons-div">
                     <button class="btn nav-buttons" data-toggle="modal"
-                            data-target="#signUpModal"
+                            data-target="#signUpBox"
                             type="submit">Sign Up</button>
                     <button class="btn nav-buttons button-sign-in"  data-toggle="modal"
-                            data-target="#signInModal"
+                            data-target="#signInBox"
                             type="submit">Sign In</button>
                     <!-- Sign Up Modal -->
-                    <div id="signUpModal" class="modal fade" role="dialog">
+                    <div id="signUpBox" class="modal fade" role="dialog">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -67,7 +62,7 @@
                         </div>
                     </div>
                     <!-- Sign In Modal -->
-                    <div id="signInModal" class="modal fade" role="dialog">
+                    <div id="signInBox" class="modal fade" role="dialog">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -89,7 +84,7 @@
                                 <div class="modal-footer">
                                     <button type="submit" form="sign-in-form" class="btn btn-success btn-width">Sign In</button>
                                     <div class="bottom-text-div">
-                                        Not a member ? <a href="#" onclick="openSignUpModal()">Sign Up </a>
+                                        Not a member ? <a href="#" onclick="openSignUpBox()">Sign Up </a>
                                     </div>
                                 </div>
                             </div>
@@ -99,42 +94,6 @@
                 </div>
             </div>
         </nav>
-
-        <!-- Buttons Div -->
-        <div class="posts-div">
-            <button  type="button" class="btn btn-warning" onclick="window.location.href='html/postslist.html'">All Posts</button>
-            <button  type="button" class="btn btn-warning" data-toggle="modal"
-                     data-target="#createPostModal">Create Post</button>
-        </div>
-        <div id="createPostModal" class="modal fade" role="dialog">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">Pen Your Post</h4>
-                    </div>
-                    <div class="modal-body">
-                        <form id="create-form">
-                            <div class="form-group">
-                                <label for="title">Title</label>
-                                <input type="text" class="form-control" id="title" placeholder="Enter title of your post"
-                                       name="title" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="content">Contents</label>
-                                <textarea class="form-control" id="content" placeholder="Enter the contents of your post"
-                                          rows="15"></textarea>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer create-button">
-                        <button type="submit" form="create-form" class="btn btn-success">Create</button>
-                    </div>
-                </div>
-
-            </div>
-        </div>
     </div>
 </body>
-
 </html>

@@ -55,7 +55,7 @@ function renderPosts(posts) {
                 '                    </div>\n' +
                 '                    <p class="post-detail-para">' + item.content + '</p>\n' +
                 '                    <span class="ellipsis-span">\n' +
-                '                        <i class="fa fa-ellipsis-h" aria-hidden="true"></i>\n' +
+                '                        <i class="fa fa-ellipsis-h" aria-hidden="true" onclick="goToPostPage()"></i>\n' +
                 '                </span>\n' +
                 '                </div>';
             mainDiv.appendChild(postsDiv);
@@ -83,4 +83,10 @@ function deletePost() {
     } else if (afterDeleteLen % 2 !== 0 && !el.classList.contains('last-odd-post')) {
         el.classList.add('last-odd-post');
     }
+}
+
+function goToPostPage() {
+    console.log('location is', window.location.href.split('html'));
+    let prevHREF = window.location.href.split('html');
+    window.location.href = prevHREF[0] + 'html/post.html';
 }
