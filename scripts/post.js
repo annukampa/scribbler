@@ -13,3 +13,10 @@ function renderEditPostDiv() {
     subHeaderEl.innerText = postData.writer;
     contentDiv.innerHTML = postData.content;
 }
+
+function editPost() {
+    document.getElementById('edit-header').setAttribute("contenteditable", "true");
+    document.getElementById('edit-header').className = 'editable-box-border';
+    document.getElementById('post-content').setAttribute("contenteditable", "true");
+    document.getElementById('post-content').className = 'editable-box-border';
+}

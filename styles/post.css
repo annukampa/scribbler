@@ -13,9 +13,9 @@
     font-size: 18px;
     font-family: 'Ubuntu Mono', serif;
 }
-#post-content {
-    padding-left: 3%;
-    padding-right: 3%;
+#post-content, #edit-header {
+    margin-left: 3%;
+    margin-right: 3%;
 }
 .post-page-btn {
     background-color: #ed2553;
@@ -51,4 +51,11 @@
 .added-comments-section {
     margin-left: 3%;
     margin-top: 1%;
+}
+[contenteditable] {
+    outline: 0px solid transparent;
+    text-align: center;
+}
+.editable-box-border {
+    border: 1px solid #ed2553;
 }
