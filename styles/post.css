@@ -1,0 +1,15 @@
+.edit-posts-div {
+    margin-top: 2%;
+}
+.edit-sub-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-bottom: 2%;
+}
+#post-content {
+    padding-left: 3%;
+    padding-right: 3%;
+}
