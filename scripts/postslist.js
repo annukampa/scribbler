@@ -106,9 +106,7 @@ function deletePost() {
 }
 
 function goToPostPage(spanId) {
-    console.log('current id is', parseInt(spanId.split('ellipsis')[1], 10));
     let spanItemIndex = parseInt(spanId.split('ellipsis')[1], 10);
-    console.log('items from post is', allPosts[spanItemIndex]);
     localStorage.setItem('item-to-edit', JSON.stringify(allPosts[spanItemIndex]));
     let prevHREF = window.location.href.split('html');
     window.location.href = prevHREF[0] + 'html/post.html';
