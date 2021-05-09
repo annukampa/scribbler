@@ -7,133 +7,217 @@
     <!-- Google Fonts file -->
     <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap" rel="stylesheet">
-    <link href="styles/postslist.css" rel="stylesheet">
-    <link href="styles/common.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../styles/common.css">
+    <link rel="stylesheet" href="../styles/postslist.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
 <body>
-    <!-- TODO: Include code for header here -->
+        <!-- Header part -->
+        <nav class="navbar navbar-light">
+            <div class="container-fluid">
+                <a class="nav-main-heading">ScriBBler</a>
+                <span class="nav-sub-heading">Explore, Imagine, Create</span>
+                <div class="buttons-div">
+                    <button class="btn nav-buttons" data-toggle="modal"
+                            data-target="#signUpModal"
+                            type="submit">Sign Up</button>
+                    <button class="btn nav-buttons button-sign-in"  data-toggle="modal"
+                            data-target="#signInModal"
+                            type="submit">Sign In</button>
+                    <!-- Sign Up Modal -->
+                    <div id="signUpModal" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Get Started</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form id="sign-up-form">
+                                        <div class="form-group">
+                                            <label for="name">Name</label>
+                                            <input type="text" class="form-control" id="name" placeholder="Enter your name" name="name" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="username">Username</label>
+                                            <input type="text" class="form-control" id="username" placeholder="Enter your username" name="username" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="pwd">Password</label>
+                                            <input type="password" class="form-control" id="pwd" placeholder="Enter your password" name="pwd" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="confirm-pwd">Confirm Password</label>
+                                            <input type="password" class="form-control" id="confirm-pwd" placeholder="Re-enter your password" name="confirm-pwd" required>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="submit" form="sign-up-form" class="btn btn-success btn-width">Sign Up</button>
+                                </div>
+                            </div>
 
-    <!-- ATTENTION: The HTML code for the list of posts has been given to you. You can feel free to add/delete/modify this code. You need to write the proper CSS and JavaScript code corresponding to this page so that the result looks like the screenshots given to you in the Project Statement. -->
+                        </div>
+                    </div>
+                    <!-- Sign In Modal -->
+                    <div id="signInModal" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Welcome Back!</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form id="sign-in-form">
+                                        <div class="form-group">
+                                            <label for="user-name">Username</label>
+                                            <input type="text" class="form-control" id="user-name" placeholder="Enter your username" name="user-name" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="pswd">Password</label>
+                                            <input type="password" class="form-control" id="pswd" placeholder="Enter your password" name="pswd" required>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="submit" form="sign-in-form" class="btn btn-success btn-width">Sign In</button>
+                                    <div class="bottom-text-div">
+                                        Not a member ? <a href="#" onclick="openSignUpModal()">Sign Up </a>
+                                    </div>
+                                </div>
+                            </div>
 
-    <!-- list of all posts starts here -->
-    <div>
-
-        <!-- post 1 starts here -->
-        <div>
-            <div>
-                <p>Srishti Gupta</p>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </nav>
+        <!-- list of all posts starts here -->
+        <div class="posts-list-div">
+            <!-- post 1 starts here -->
+            <div class="post-div">
+                <div class="post-user">
+                    <p>Srishti Gupta</p>
+                </div>
 
-            <div>
-                <div>
-                    <p>‘let’ me be a ‘const’(ant), not a ‘var’(iable)!</p>
-                    <span>
+                <div class="posts-detail">
+                    <div class="post-header-div">
+                        <p class="post-header">'let' me be a 'const'(ant), not a 'var'(iable) !</p>
+                        <span>
                         <!-- TODO: Include Font Awesome icon for delete icon here -->
+                            <i class="fa fa-trash" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <p>Since JavaScript does not have any type-checking, either of these keywords can be used to declare a variable of any type (datatype) in JavaScript. Though all the three keywords are used for the same purpose, they are different.</p>
+                    <span class="ellipsis-span">
+                    <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
+                        <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                </span>
+                </div>
+            </div>
+            <!-- post 1 ends here -->
+
+            <!-- post 2 starts here -->
+            <div class="post-div">
+                <div class="post-user">
+                    <p>Colby Fayock</p>
+                </div>
+
+                <div class="posts-detail">
+                    <div class="post-header-div">
+                        <p class="post-header">What is linting and how can it save you time?</p>
+                        <span>
+                        <!-- TODO: Include Font Awesome icon for delete icon here -->
+                            <i class="fa fa-trash" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <p>One of the biggest challenges in software development is time. It’s something we can’t easily get more of, but linting can help us make the most out of the time we have.</p>
+                    <span class="ellipsis-span">
+                    <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
+                        <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                </span>
+                </div>
+            </div>
+            <!-- post 2 ends here -->
+        </div>
+        <div class="posts-list-div">
+            <!-- post 3 starts here -->
+            <div class="post-div">
+                <div class="post-user">
+                    <p>Yazeed Bzadough</p>
+                </div>
+
+                <div class="posts-detail">
+                    <div class="post-header-div">
+                        <p class="post-header">How to Get More Views on Your Tech Blog</p>
+                        <span>
+                        <!-- TODO: Include Font Awesome icon for delete icon here -->
+                            <i class="fa fa-trash" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <p>If you're a developer with a Twitter account, you've already seen everyone and their cat start a blog, YouTube channel, or Patreon. We all want to become stars, or at the very least, a recognizable name in the industry.</p>
+                    <span class="ellipsis-span">
+                    <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
+                        <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
                     </span>
                 </div>
-                <p>Since JavaScript does not have any type-checking, either of these keywords can be used to declare a variable of any type (datatype) in JavaScript. Though all the three keywords are used for the same purpose, they are different.</p>
-                <span>
-                    <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
-                </span>
             </div>
-        </div>
-        <!-- post 1 ends here -->
+            <!-- post 3 ends here -->
 
-        <!-- post 2 starts here -->
-        <div>
-            <div>
-                <p>Colby Fayock</p>
-            </div>
+            <!-- post 4 starts here -->
+            <div class="post-div">
+                <div class="post-user">
+                    <p>Cedd Burge</p>
+                </div>
 
-            <div>
-                <div>
-                    <p>What is linting and how can it save you time?</p>
-                    <span>
+                <div class="posts-detail">
+                    <div class="post-header-div">
+                        <p class="post-header">How to write easily describable code</p>
+                        <span>
                         <!-- TODO: Include Font Awesome icon for delete icon here -->
+                            <i class="fa fa-trash" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <p>When code is not describable using words, most people have to do some mental mapping to turn it in to words. This wastes mental energy, and you run the risk of getting the mapping wrong. Different people will map to different words, which
+                        leads to confusion when discussing the code.</p>
+                    <span class="ellipsis-span">
+                    <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
+                        <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                </span>
+                </div>
+            </div>
+            <!-- post 4 ends here -->
+
+        </div>
+        <div class="posts-list-div">
+            <!-- post 5 starts here -->
+            <div class="post-div">
+                <div class="post-user">
+                    <p>Srishti Gupta</p>
+                </div>
+
+                <div class="posts-detail">
+                    <div class="post-header-div">
+                        <p class="post-header">Everything you should know about 'module' & 'require' in Node.js</p>
+                        <span>
+                        <!-- TODO: Include Font Awesome icon for delete icon here -->
+                            <i class="fa fa-trash" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <p>Node.js treats each JavaScript file as a separate module. For instance, if you have a file containing some code and this file is named xyz.js, then this file is treated as a module in Node, and you can say that you’ve created a module
+                        named xyz.</p>
+                    <span class="ellipsis-span">
+                    <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
+                        <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
                     </span>
                 </div>
-                <p>One of the biggest challenges in software development is time. It’s something we can’t easily get more of, but linting can help us make the most out of the time we have.</p>
-                <span>
-                    <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
-                </span>
             </div>
+            <!-- post 5 ends here -->
         </div>
-        <!-- post 2 ends here -->
-
-        <!-- post 3 starts here -->
-        <div>
-            <div>
-                <p>Yazeed Bzadough</p>
-            </div>
-
-            <div>
-                <div>
-                    <p>How to Get More Views on Your Tech Blog</p>
-                    <span>
-                        <!-- TODO: Include Font Awesome icon for delete icon here -->
-                    </span>
-                </div>
-                <p>If you're a developer with a Twitter account, you've already seen everyone and their cat start a blog, YouTube channel, or Patreon. We all want to become stars, or at the very least, a recognizable name in the industry.</p>
-                <span>
-                    <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
-                </span>
-            </div>
-        </div>
-        <!-- post 3 ends here -->
-
-        <!-- post 4 starts here -->
-        <div>
-            <div>
-                <p>Cedd Burge</p>
-            </div>
-
-            <div>
-                <div>
-                    <p>How to write easily describable code</p>
-                    <span>
-                        <!-- TODO: Include Font Awesome icon for delete icon here -->
-                    </span>
-                </div>
-                <p>When code is not describable using words, most people have to do some mental mapping to turn it in to words. This wastes mental energy, and you run the risk of getting the mapping wrong. Different people will map to different words, which
-                    leads to confusion when discussing the code.</p>
-                <span>
-                    <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
-                </span>
-            </div>
-        </div>
-        <!-- post 4 ends here -->
-
-        <!-- post 5 starts here -->
-        <div>
-            <div>
-                <p>Srishti Gupta</p>
-            </div>
-
-            <div>
-                <div>
-                    <p>Everything you should know about ‘module’ & ‘require’ in Node.js</p>
-                    <span>
-                        <!-- TODO: Include Font Awesome icon for delete icon here -->
-                    </span>
-                </div>
-                <p>Node.js treats each JavaScript file as a separate module. For instance, if you have a file containing some code and this file is named xyz.js, then this file is treated as a module in Node, and you can say that you’ve created a module
-                    named xyz.</p>
-                <span>
-                    <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
-                </span>
-            </div>
-        </div>
-        <!-- post 5 ends here -->
-
-        <!-- TODO: Write code for delete post modal here -->
-
-    </div>
-    <!-- list of all posts ends here -->
-
+        <!-- list of all posts ends here -->
 </body>
 
 </html>
