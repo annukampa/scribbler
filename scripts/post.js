@@ -1,6 +1,7 @@
 let commentsArr = [];
 let postData;
 let likes = 0;
+let alreadyEdited = false;
 function openSignUpBox() {
     $('#signInBox').modal('hide');
     $('#signUpBox').modal('show');
@@ -37,10 +38,14 @@ function savePost() {
     document.getElementById('edit-header').removeAttribute("contenteditable");
     document.getElementById('edit-header').classList.remove('editable-box-border');
     document.getElementById('edit-header').style.textAlign = 'center';
-    postData.heading = 'UPDATED : ' + postData.heading;
-    document.getElementById('edit-header').innerText = postData.heading;
     let contentDiv = document.getElementById('post-content');
-    contentDiv.innerHTML = '<div>UPDATED : </div>\n' + postData.content;
+    if (alreadyEdited) {
+        postData.heading = document.getElementById('edit-header').innerText;
+    } else {
+        postData.heading = 'UPDATED : ' + document.getElementById('edit-header').innerText;
+        contentDiv.innerHTML = '<div class="text-left">UPDATED : </div>\n' + contentDiv.innerHTML;
+    }
+    document.getElementById('edit-header').innerText = postData.heading;
     document.getElementById('post-content').removeAttribute("contenteditable");
     document.getElementById('post-content').classList.remove('editable-box-border');
     let saveBtn = document.getElementById('save-button');
@@ -50,6 +55,7 @@ function savePost() {
         '                <button id="edit-button" class="btn post-page-btn" onclick="editPost()">Edit\n' +
         '                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>\n' +
         '                </button>'
+    alreadyEdited = true;
 }
 
 function hitLike() {
