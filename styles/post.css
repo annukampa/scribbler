@@ -23,6 +23,12 @@
     font-weight: 500;
     outline: 0;
 }
+.comment-btn {
+    background-color: red;
+    color: #fff;
+    font-weight: 500;
+    outline: 0;
+}
 .post-page-btn i {
     font-size: 18px;
     position: relative;
@@ -61,4 +67,15 @@
 }
 .icon-left-align {
     left: 3px;
+}
+#added-comments-list {
+    padding: 1%;
+    background-color: #dedede;
+    width: 62%;
+    padding-top: 22px;
+}
+#added-comments-list div {
+    background-color: #fff;
+    padding: 2%;
+    margin-bottom: 1%;
 }

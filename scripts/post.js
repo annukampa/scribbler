@@ -34,7 +34,6 @@ function editPost() {
 }
 
 function savePost() {
-    console.log('in save post @#@#@#@');
     document.getElementById('edit-header').removeAttribute("contenteditable");
     document.getElementById('edit-header').classList.remove('editable-box-border');
     document.getElementById('edit-header').style.textAlign = 'center';
@@ -65,17 +64,11 @@ function hitLike() {
 }
 
 function addComment() {
-    console.log('text box comment is', document.getElementsByClassName('comment-box')[0].value);
     let commentsDiv = document.getElementById('added-comments-list');
     let comment = document.getElementsByClassName('comment-box')[0].value;
-    /*if (commentsArr.length === 0) {
-        commentsArr.push(comment);
-    } else {
-        commentsArr.unshift(comment);
-    }*/
     commentsArr.push(comment);
-    console.log('comments arr is#@#', commentsArr);
     let commentEl = document.createElement('div');
     commentEl.innerHTML = comment;
-    commentsDiv.appendChild(commentEl);
+    document.getElementsByClassName('comment-box')[0].value = '';
+    commentsDiv.insertBefore(commentEl, commentsDiv.children[0]);
 }
